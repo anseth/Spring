@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="triangle" class="com.anfcorp.anand.spring03.Triangle" autowire="constructor">
+    	<!-- autowire=byName is used if referencing by object names. Freakin awesome!  -->
+        <!-- <property name="type" value="equi"></property>  -->
+    	<!-- <property name="height" value="100"></property>  -->
+    	<!-- <constructor-arg name="type"  value="isoceles"></constructor-arg>  -->
+    	<!-- <constructor-arg name="height" value="10"></constructor-arg>  -->
+	</bean>
+    
+    <bean class="com.anfcorp.anand.spring03.Point" id="pointA" >
+    	<property name="coordX" value = "134"></property>
+    	<property name="coordY" value = "121"></property>   	
+    </bean>
+    <bean class="com.anfcorp.anand.spring03.Point" id="pointB" >
+    	<property name="coordX" value = "545"></property>
+    	<property name="coordY" value = "928"></property>   	
+    </bean>
+    <bean class="com.anfcorp.anand.spring03.Point" id="pointC" >
+    	<property name="coordX" value = "883"></property>
+    	<property name="coordY" value = "993"></property>   	
+    </bean>
+    
+    <alias name="triangle" alias="triangle-alias"/>
+    
+    
+    
+    
+    
+
+    
+</beans>

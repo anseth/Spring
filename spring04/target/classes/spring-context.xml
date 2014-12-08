@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="triangle" class="com.anfcorp.anand.spring03.Triangle">
+        <!-- <property name="type" value="equi"></property>  -->
+    	<!-- <property name="height" value="100"></property>  -->
+    	<!-- <constructor-arg name="type"  value="isoceles"></constructor-arg>  -->
+    	<!-- <constructor-arg name="height" value="10"></constructor-arg>  -->
+    	
+    	<property name="points" >
+    		<list>
+    			<ref bean="pointA"/>
+    			<ref bean="pointB"/>
+    			<ref bean="pointC"/>
+    		</list>
+    	</property>
+    	
+    </bean>
+    
+    <bean class="com.anfcorp.anand.spring03.Point" id="pointA" >
+    	<property name="coordX" value = "0"></property>
+    	<property name="coordY" value = "0"></property>   	
+    </bean>
+    <bean class="com.anfcorp.anand.spring03.Point" id="pointB" >
+    	<property name="coordX" value = "10"></property>
+    	<property name="coordY" value = "10"></property>   	
+    </bean>
+    <bean class="com.anfcorp.anand.spring03.Point" id="pointC" >
+    	<property name="coordX" value = "20"></property>
+    	<property name="coordY" value = "20"></property>   	
+    </bean>
+    
+    <alias name="triangle" alias="triangle-alias"/>
+    
+    
+    
+    
+    
+
+    
+</beans>
